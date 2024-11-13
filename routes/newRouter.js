@@ -1,9 +1,20 @@
 const {Router} = require('express');
+const {messages} = require('./indexRouter')
 
-const newRouter = Router()
+const newRouter = Router();
 
 newRouter.get('/', (req, res) => {
-    res.send('New message route');
+    res.render('new');
 })
 
-module.exports = newRouter
+newRouter.post('/', (req, res) => {
+    const newMessage = {
+        name: req.body.name,
+        text: req.body.message,
+        added: req.body.date,
+    }
+    messages.push(newMessage);
+    res.redirect('/')
+})
+
+module.exports = newRouter;

@@ -20,8 +20,10 @@ const messages = [
 ]
 
 indexRouter.get('/', (req, res) => {
-    res.send('Setting up routes')
+    res.render("index", {
+        messages: messages,
+    })
 })
 
 
-module.exports = indexRouter;
+module.exports = {indexRouter, messages};
