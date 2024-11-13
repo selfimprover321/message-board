@@ -7,7 +7,7 @@
 </head>
 <body>
     <a href="/new">Create new message</a>
-    <% message.forEach((message) => { %>
+    <% messages.forEach((message) => { %>
         <div>
             <p><%= message.text %></p>
             <p>By: <%= message.user %></p>

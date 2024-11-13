@@ -9,9 +9,9 @@ newRouter.get('/', (req, res) => {
 
 newRouter.post('/', (req, res) => {
     const newMessage = {
-        name: req.body.name,
+        user: req.body.user,
         text: req.body.message,
-        added: req.body.date,
+        added: new Date(req.body.date),
     }
     messages.push(newMessage);
     res.redirect('/')

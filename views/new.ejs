@@ -6,13 +6,20 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Create New Message</h1>
     <form method="POST" action="/new">
-        <label for="user">Name: </label>
-        <input type="text" placeholder="Joe Biden" name="user" id="user"/>
-        <label for="message">Message: </label>
-        <textarea placeholder="my message" name="message" id="message"></textarea>
-        <label for="date">Date: </label>
-        <input type="date" name="date" id="date"/>
+        <div>
+            <label for="user">Name: </label>
+            <input type="text" placeholder="Joe Biden" name="user" id="user" required/>
+        </div>
+        <div>
+            <label for="message">Message: </label>
+            <textarea placeholder="my message" name="message" id="message" required></textarea>
+        </div>
+        <div>
+            <label for="date">Date: </label>
+            <input type="date" name="date" id="date" required/>
+        </div>
         <button type="submit">Submit</button>
     </form>
 </body>
